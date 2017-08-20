@@ -50,6 +50,61 @@
 					</cms:module>
 				</ul>
 			</section>
+
+			<!-- section about saffron plant -->
+			<section id="about_saffron">
+				<cms:svg file="site_sprite.svg" symbol="icon-logo2" class="logo2"/>
+
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="about_saffron"
+					/>
+
+				<img
+					src="_BASEURL.'/site/images/package.png'"
+					alt="this_img_name"
+					cms:eval="src"
+					cms:constant="alt"
+					/>
+			</section>
+
+			<footer>
+				<div id="content_left">
+					<cms:module
+						name="articles"
+						action="show"
+						text_id="footer_article"
+						template="stock/article_generic.xml"
+						>
+						<param name="title" value=""/>
+					</cms:module>
+
+					<a href="'tel:'.urlencode(Language::get_Text('phone'))"
+						cms:eval="href"
+						class="phone"
+						>
+						<cms:text constant="footer_phone"/>
+					</a>
+				</div>
+
+				<div id="form_container">
+					<p><cms:text constant="form_title"/></p>
+					<cms:module
+						name="contact_form"
+						action="show"
+						text_id="contact_form"
+						/>
+				</div>
+
+			</footer>
+
+			<!-- Copyright -->
+			<cms:template file="stock/copyright.xml">
+				<param name="holder" value="copyright_holder"/>
+				<param name="text" value="copyright_text"/>
+				<param name="light" value=""/>
+			</cms:template>
 		</body>
 	</html>
 </document>

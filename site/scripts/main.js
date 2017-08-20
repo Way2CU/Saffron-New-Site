@@ -51,6 +51,11 @@ Site.is_mobile = function() {
 Site.on_load = function() {
 	if (Site.is_mobile())
 		Site.mobile_menu = new Caracal.MobileMenu();
+
+	Site.submit_buttons = document.querySelectorAll('div.controls button.submit');
+	for(var i=0; i < Site.submit_buttons.length; i++) {
+		Site.submit_buttons[i].innerHTML = 'Send Form';
+	}
 };
 
 
