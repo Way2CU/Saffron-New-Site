@@ -1,7 +1,154 @@
 /**
- * Content Style Sheet
- * Saffron New Site
- *
- * Copyright (c) 2017. by Way2CU, http://way2cu.com
- * Authors: Vladimir Anusic
- */
+* Content Style Sheet
+* Saffron New Site
+*
+* Copyright (c) 2017. by Way2CU, http://way2cu.com
+* Authors: Vladimir Anusic
+*/
+
+/**
+*	Header
+*/
+
+@keyframes jumping_arrow {
+	from {
+		transform: translateY(-20px);
+	}
+
+	to {
+		transform: translateY(20px);
+	}
+}
+
+header {
+ 	padding: @section_spacing calc(~'(100% - 1200px) / 2');
+ 	min-height: 600px;
+ 	background-image: url(../images/header.jpg);
+ 	background-size: 100% 100%;
+ 	background-repeat: no-repeat;
+ 	color: @color_red;
+ 	text-transform: uppercase;
+
+ 	& svg.logo {
+ 		width: 550px;
+ 		height: 190px;
+ 		display: block;
+ 		fill: @color_background;
+ 		margin-top: 5%;
+ 		margin-left: 10%;
+ 	}
+
+ 	& h1 {
+ 		display: block;
+ 		width: 50%;
+ 		padding: 0.5rem;
+ 		background-color: @color_yellow;
+ 		border: 1px solid transparent;
+ 		border-radius: 5px;
+ 		text-align: center;
+ 		margin-left: 8%;
+ 		margin-top: 3%;
+ 	}
+
+ 	& svg.arrow {
+ 		display: block;
+ 		margin-left: 20%;
+ 		margin-top: 10%;
+
+ 		animation-name: jumping_arrow;
+		animation-duration: 1s;
+		animation-direction: alternate;
+		animation-timing-function: ease-in-out;
+		animation-iteration-count: infinite;
+ 	}
+}
+
+/*
+*	Section about
+*/
+
+section#about {
+	padding: @section_spacing calc(~'(100% - 1200px) / 2');
+	background-image: url(../images/about_banner.svg);
+ 	background-size: 400px 400px;
+ 	background-position: 75% 100%;
+ 	background-repeat: no-repeat;
+ 	color: @color_red;
+ 	min-height: 300px;
+
+ 	& article {
+ 		width: 50%;
+		margin-left: 15%;
+
+		& h1 {
+			display: none;
+		}
+ 	}
+}
+
+/**
+* Section food samples
+*/
+
+section#food_samples {
+	padding-top: @section_spacing;
+
+	& a {
+		display: inline-block;
+
+		& img {
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+}
+
+/**
+*	Section tendencies
+*/
+
+section#tendencies {
+	padding: @section_spacing calc(~'(100% - 1200px) / 2');
+	background-color: @color_yellow;
+	min-height: 300px;
+
+	& ul {
+		display: block;
+		margin: 0 auto;
+		width: 80%;
+		list-style-type: none;
+
+		& li {
+			display: inline-block;
+			width: 33%;
+			color: @color_red;
+			text-align: center;
+			vertical-align: top;
+
+			& h1 {
+				text-transform: uppercase;
+				margin-bottom: 0;
+				margin-top: 1rem;
+			}
+
+			& svg {
+				width: 100px;
+				height: 100px;
+				display: block;
+				margin: 0 auto;
+			}
+
+			& hr {
+				width: 160px;
+				height: 15px;
+				margin-bottom: 2rem;
+				border: 0;
+				background-color: @color_background;
+			}
+
+			& p {
+				display: block;
+			}
+		}
+	}
+}

@@ -9,6 +9,47 @@
 
 		<body>
 			<cms:svg file="site_sprite.svg"/>
+
+			<header>
+				<cms:svg file="site_sprite.svg" symbol="icon-logo1" class="logo"/>
+				<h1><cms:text constant="start_franchise"/></h1>
+				<cms:svg file="site_sprite.svg" symbol="icon-arrow" class="arrow"/>
+			</header>
+
+			<!-- section abou saffron franchise -->
+			<section id="about">
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="about"
+					/>
+			</section>
+
+			<!-- food samples gallery -->
+			<section id="food_samples">
+				<cms:module
+					name="gallery"
+					action="show_image_list"
+					group="food_samples"
+					order_by="text_id"
+					template="stock/image_generic.xml"
+					>
+					<param name="thumbnail_size" value="266"/>
+				</cms:module>
+			</section>
+
+			<section id="tendencies">
+				<ul>
+					<cms:module
+						name="articles"
+						action="show_list"
+						group="tendencies"
+						template="stock/features_generic.xml"
+						>
+						<param name="sprite" value="site_sprite.svg"/>
+					</cms:module>
+				</ul>
+			</section>
 		</body>
 	</html>
 </document>
