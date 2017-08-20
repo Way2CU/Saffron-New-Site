@@ -3,7 +3,7 @@
  * Site Name
  *
  * Copyright (c) 2015. by Way2CU, http://way2cu.com
- * Authors:
+ * Authors: Mladen Mijatov
  */
 
 // create or use existing site scope
