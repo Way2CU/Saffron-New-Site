@@ -5,3 +5,148 @@
  * Copyright (c) 2017. by Way2CU, http://way2cu.com
  * Authors: Vladimir Anusic
  */
+
+/**
+*	Header
+*/
+
+@keyframes jumping_arrow {
+	from {
+		transform: translateY(-15px);
+	}
+
+	to {
+		transform: translateY(15px);
+	}
+}
+
+header {
+ 	background-image: url(../images/mobile-header.jpg);
+ 	background-size: 100% 100%;
+ 	background-repeat: no-repeat;
+ 	min-height: 600px;
+
+ 	& svg.logo {
+ 		display: block;
+ 		margin: 0 auto;
+ 		width: 350px;
+ 		fill: @color_background;
+ 	}
+
+ 	& h1 {
+ 		display: block;
+ 		font-size: 1.7rem;
+ 		padding: 0.5rem;
+ 		border-radius: 5px;
+ 		background-color: @color_yellow;
+ 		color: @color_red;
+ 		margin: 0 auto;
+ 		width: 93%;
+ 		text-align: center;
+ 	}
+
+ 	& svg.arrow {
+ 		width: 70px;
+ 		height: 70px;
+ 		display: block;
+ 		margin: 0 auto;
+ 		margin-top: 2rem;
+
+ 		animation-name: jumping_arrow;
+		animation-duration: 1s;
+		animation-direction: alternate;
+		animation-timing-function: ease-in-out;
+		animation-iteration-count: infinite;
+ 	}
+}
+
+/**
+*	Section about
+*/
+
+section#about {
+	padding: @section_spacing 1rem;
+	background: url(../images/about_banner.svg);
+	background-size: 80% 50%;
+	background-position: 50% 100%;
+	background-repeat: no-repeat;
+	min-height: 800px;
+
+	& article {
+		color: @color_red;
+
+		& h1 {
+			display: none;
+		}
+	}
+}
+
+/**
+* Section food samples
+*/
+
+section#food_samples {
+	max-height: 350px;
+	overflow: hidden;
+
+	& a {
+		display: inline-block;
+		width: 150px;
+		height: 170px;
+		overflow: hidden;
+
+		& img {
+			display: inline-block;
+			vertical-align: middle;
+			width: 100%;
+		}
+	}
+}
+
+/**
+*	Section tendencies
+*/
+
+section#tendencies {
+	padding: @section_spacing 1rem;
+	background-color: @color_yellow;
+
+	& ul {
+		display: block;
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+
+		& li {
+			display: block;
+			color: @color_red;
+			text-align: center;
+			margin-bottom: 2rem;
+
+			& h1 {
+				text-transform: uppercase;
+				margin-bottom: 0;
+				margin-top: 1rem;
+			}
+
+			& svg {
+				width: 80px;
+				height: 80px;
+				display: block;
+				margin: 0 auto;
+			}
+
+			& hr {
+				width: 30%;
+				height: 15px;
+				margin-bottom: 2rem;
+				border: 0;
+				background-color: @color_background;
+			}
+
+			& p {
+				display: block;
+			}
+		}
+	}
+}
