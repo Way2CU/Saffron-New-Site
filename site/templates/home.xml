@@ -27,15 +27,31 @@
 
 			<!-- food samples gallery -->
 			<section id="food_samples">
-				<cms:module
-					name="gallery"
-					action="show_image_list"
-					group="food_samples"
-					order_by="text_id"
-					template="stock/image_generic.xml"
-					>
-					<param name="thumbnail_size" value="266"/>
-				</cms:module>
+				<cms:desktop>
+					<cms:module
+						name="gallery"
+						action="show_image_list"
+						group="food_samples"
+						order_by="text_id"
+						template="stock/image_generic.xml"
+						>
+						<param name="thumbnail_size" value="240"/>
+						<param name="constrain" value="Thumbnail::CONSTRAIN_WIDTH"/>
+					</cms:module>
+				</cms:desktop>
+
+				<cms:mobile>
+					<cms:module
+						name="gallery"
+						action="show_image_list"
+						group="food_samples"
+						order_by="text_id"
+						template="stock/image_generic.xml"
+						>
+						<param name="thumbnail_size" value="100"/>
+						<param name="constrain" value="Thumbnail::CONSTRAIN_WIDTH"/>
+					</cms:module>
+				</cms:mobile>
 			</section>
 
 			<section id="tendencies">

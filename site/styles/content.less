@@ -1,14 +1,14 @@
 /**
-* Content Style Sheet
-* Saffron New Site
-*
-* Copyright (c) 2017. by Way2CU, http://way2cu.com
-* Authors: Vladimir Anusic
-*/
+ * Content Style Sheet
+ * Saffron New Site
+ *
+ * Copyright (c) 2017. by Way2CU, http://way2cu.com
+ * Authors: Vladimir Anusic
+ */
 
 /**
-*	Header
-*/
+ *	Header
+ */
 
 @keyframes jumping_arrow {
 	from {
@@ -63,9 +63,9 @@ header {
  	}
 }
 
-/*
-*	Section about
-*/
+/**
+ *	Section about
+ */
 
 section#about {
 	padding: @section_spacing calc(~'(100% - 1200px) / 2');
@@ -74,6 +74,7 @@ section#about {
  	background-position: 75% 100%;
  	background-repeat: no-repeat;
  	color: @color_red;
+ 	margin-bottom: 2rem;
  	min-height: 300px;
 
  	& article {
@@ -87,25 +88,32 @@ section#about {
 }
 
 /**
-* Section food samples
-*/
+ * Section food samples
+ */
 
 section#food_samples {
-	padding-top: @section_spacing;
+	background-color: darken(@color_text, 10%);
+	text-align: center;
 
 	& a {
 		display: inline-block;
+		text-align: center;
 
 		& img {
 			display: inline-block;
-			vertical-align: middle;
+			vertical-align: top;
+
+			&:hover {
+				transform: scale(1.1);
+				transition: all 0.3s;
+			}
 		}
 	}
 }
 
 /**
-*	Section tendencies
-*/
+ *	Section tendencies
+ */
 
 section#tendencies {
 	padding: @section_spacing calc(~'(100% - 1200px) / 2');
@@ -155,8 +163,8 @@ section#tendencies {
 }
 
 /**
-*	Sectio about_saffron
-*/
+ *	Sectio about_saffron
+ */
 
 section#about_saffron {
 	padding: @section_spacing calc(~'(100% - 1200px) / 2');
@@ -195,8 +203,8 @@ section#about_saffron {
 }
 
 /**
-*	Footer
-*/
+ *	Footer
+ */
 
 footer {
 	padding: @section_spacing calc(~'(100% - 1200px) / 2');
@@ -316,8 +324,8 @@ footer {
 }
 
 /**
-*	Copyright
-*/
+ *	Copyright
+ */
 
 div.copyright {
 	text-align: center;
