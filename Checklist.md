@@ -5,8 +5,8 @@ All of these need to be checked manually, changed and then committed. System wil
 - Optimization:
 	- [x] PNG images are optimized using `optipng` command;
 	- [x] JPEG images are converted from original PNG and optimized using `guetzli` command;
-	- [ ] SVG images are cleaned and optimized;
-	- [ ] Make sure site scores 95+ on Page Speed Insights (ideally 100);
+	- [x] SVG images are cleaned and optimized;
+	- [x] Make sure site scores 95+ on Page Speed Insights (ideally 100);
 - Site specific items:
 	- [x] `system_init.xml` file contains all the modules used;
 	- [ ] Deployment script `group_vars/all` file is configured;
@@ -32,10 +32,10 @@ All of these need to be checked manually, changed and then committed. System wil
 	- [x] Templates have subject properly defined;
 	- [ ] Form submits and client/developer receives email.
 - Shop:
-	> - [ ] Desired payment method is enabled and configured;
-	> - [ ] Default warehouse is created;
-	> - [ ] Default currency is selected;
-	> - [ ] Contact form template for transaction is created and selected;
-	> - [ ] Shop is not in testing mode.
+	> - [x] Desired payment method is enabled and configured;
+	> - [x] Default warehouse is created;
+	> - [x] Default currency is selected;
+	> - [x] Contact form template for transaction is created and selected;
+	> - [x] Shop is not in testing mode.
 - Articles:
 	- [x] Each article has a title even if it's not used;

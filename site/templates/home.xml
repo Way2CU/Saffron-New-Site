@@ -35,7 +35,7 @@
 						order_by="text_id"
 						template="stock/image_generic.xml"
 						>
-						<param name="thumbnail_size" value="240"/>
+						<param name="thumbnail_size" value="220"/>
 						<param name="constrain" value="Thumbnail::CONSTRAIN_WIDTH"/>
 					</cms:module>
 				</cms:desktop>
