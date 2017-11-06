@@ -10,6 +10,10 @@
  *	Header
  */
 
+body > svg {
+	display: none;
+}
+
 @keyframes jumping_arrow {
 	from {
 		transform: translateY(-20px);
@@ -38,16 +42,24 @@ header {
  		margin-left: 10%;
  	}
 
- 	& h1 {
+ 	& a {
+ 		font-size: 1.5rem;
  		display: block;
- 		width: 50%;
- 		padding: 0.5rem;
+ 		width: 30%;
+ 		padding: 0.5rem 1rem;
+ 		color: @color_red;
  		background-color: @color_yellow;
  		border: 1px solid transparent;
  		border-radius: 5px;
  		text-align: center;
- 		margin-left: 8%;
+ 		text-decoration: none;
+ 		margin-left: 15%;
  		margin-top: 3%;
+
+ 		&:hover {
+ 			transform: translateY(-15%);
+ 			transition: all 0.3s;
+ 		}
  	}
 
  	& svg.arrow {
@@ -209,7 +221,7 @@ section#about_saffron {
 footer {
 	padding: @section_spacing calc(~'(100% - 1200px) / 2');
 	background: url(../images/footer.svg) @color_red;
-	background-size: 100% 100%, 100% 100%;
+	background-size: cover, cover;
 	background-repeat: no-repeat;
 	color: @color_background;
 	min-height: 300px;

@@ -12,7 +12,7 @@
 
 			<header>
 				<cms:svg file="site_sprite.svg" symbol="icon-logo1" class="logo"/>
-				<h1><cms:text constant="start_franchise"/></h1>
+				<a href="#form_container"><cms:text constant="start_franchise"/></a>
 				<cms:svg file="site_sprite.svg" symbol="icon-arrow" class="arrow"/>
 			</header>
 
