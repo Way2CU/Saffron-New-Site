@@ -52,6 +52,23 @@ Site.on_load = function() {
 	if (Site.is_mobile())
 		Site.mobile_menu = new Caracal.MobileMenu();
 
+	// image slider for food samples
+	Site.gallery = new Caracal.Gallery.Slider(4, false);
+	Site.gallery
+		.images.set_container(document.querySelector('section#food_samples div'))
+		.images.set_center(false)
+		.images.set_spacing(10)
+		.controls.attach_next(document.querySelector('section#food_samples a.next'))
+		.controls.attach_previous(document.querySelector('section#food_samples a.previous'))
+		.controls.set_auto(3000)
+		.images.update();
+
+	Site.image_loader = new Caracal.Gallery.Loader();
+	Site.image_loader
+		.add_gallery(Site.gallery)
+		.set_thumbnail_size(300)
+		.load_by_group_text_id('food_samples');
+
 	Site.submit_buttons = document.querySelectorAll('div.controls button.submit');
 	for(var i=0; i < Site.submit_buttons.length; i++) {
 		Site.submit_buttons[i].innerHTML = 'Send Form';

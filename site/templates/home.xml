@@ -8,8 +8,6 @@
 		</head>
 
 		<body>
-			<cms:svg file="site_sprite.svg"/>
-
 			<header>
 				<cms:svg file="site_sprite.svg" symbol="icon-logo1" class="logo"/>
 				<a href="#form_container"><cms:text constant="start_franchise"/></a>
@@ -27,31 +25,18 @@
 
 			<!-- food samples gallery -->
 			<section id="food_samples">
-				<cms:desktop>
-					<cms:module
-						name="gallery"
-						action="show_image_list"
-						group="food_samples"
-						order_by="text_id"
-						template="stock/image_generic.xml"
-						>
-						<param name="thumbnail_size" value="220"/>
-						<param name="constrain" value="Thumbnail::CONSTRAIN_WIDTH"/>
-					</cms:module>
-				</cms:desktop>
+				<!-- holder for images -->
+				<div>
+				</div>
 
-				<cms:mobile>
-					<cms:module
-						name="gallery"
-						action="show_image_list"
-						group="food_samples"
-						order_by="text_id"
-						template="stock/image_generic.xml"
-						>
-						<param name="thumbnail_size" value="100"/>
-						<param name="constrain" value="Thumbnail::CONSTRAIN_WIDTH"/>
-					</cms:module>
-				</cms:mobile>
+				<a class="previous">
+					<cms:svg file="site_sprite.svg" symbol="icon-left-arrow" />
+					<cms:text constant="previous_image" />
+				</a>
+				<a class="next">
+					<cms:text constant="next_image" />
+					<cms:svg file="site_sprite.svg" symbol="icon-right-arrow" />
+				</a>
 			</section>
 
 			<section id="tendencies">

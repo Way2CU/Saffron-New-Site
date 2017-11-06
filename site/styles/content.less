@@ -108,20 +108,74 @@ section#about {
  */
 
 section#food_samples {
+	padding: @section_spacing calc(~'(100% - 1200px) / 2');
 	background-color: darken(@color_text, 10%);
 	text-align: center;
 
-	& a {
+	> a.next,
+	> a.previous {
 		display: inline-block;
-		text-align: center;
+		vertical-align: middle;
+		padding: 0 2.5em;
+		font-size: 1.3em;
 
-		& img {
+		svg {
+			width: 50px;
+			height: 50px;
 			display: inline-block;
-			vertical-align: top;
+			vertical-align: middle;
+		}
 
-			&:hover {
+		&:hover {
+			color: lighten(@color_text, 30%);
+			transition: color 0.3s;
+
+			svg {
 				transform: scale(1.1);
 				transition: all 0.3s;
+			}
+		}
+	}
+
+	div {
+		position: relative;
+		min-height: 330px;
+		overflow: hidden;
+
+		a {
+			position: absolute;
+			top: 0;
+			width: 280px;
+			height: 300px;
+			overflow: hidden;
+
+			border: 1px solid lighten(@color_background, 30%);
+			background-color: fade(black, 30%);
+			opacity: 0;
+			pointer-events: none;
+			transition: all 0.5s;
+			text-align: center;
+			white-space: nowrap;
+
+			&.visible {
+				opacity: 1;
+				pointer-events: auto;
+			}
+
+			&.transit {
+				transition: none;
+			}
+
+			&:before {
+				content: '';
+				display: inline-block;
+				height: 100%;
+				width: 0;
+				vertical-align: middle;
+			}
+
+			img {
+				vertical-align: middle;
 			}
 		}
 	}
