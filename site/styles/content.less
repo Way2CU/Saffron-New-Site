@@ -43,21 +43,25 @@ header {
  	}
 
  	& a {
- 		font-size: 1.5rem;
+ 		font-size: 1.7rem;
+ 		font-weight: 700;
  		display: block;
- 		width: 30%;
- 		padding: 0.5rem 1rem;
+ 		width: 36%;
+ 		padding: 1rem 1rem;
  		color: @color_red;
  		background-color: @color_yellow;
  		border: 1px solid transparent;
  		border-radius: 5px;
  		text-align: center;
  		text-decoration: none;
- 		margin-left: 15%;
+ 		margin-left: 14%;
  		margin-top: 3%;
 
- 		&:hover {
+ 		&:hover,
+ 		&:active {
  			transform: translateY(-15%);
+ 			background-color: @color_red;
+ 			color: @color_yellow;
  			transition: all 0.3s;
  		}
  	}
@@ -150,6 +154,8 @@ section#tendencies {
 				text-transform: uppercase;
 				margin-bottom: 0;
 				margin-top: 1rem;
+				font-family: 'raleway';
+				font-weight: 700;
 			}
 
 			& svg {
@@ -169,6 +175,7 @@ section#tendencies {
 
 			& p {
 				display: block;
+				font-weight: 700;
 			}
 		}
 	}
@@ -209,7 +216,7 @@ section#about_saffron {
 	& img {
 		position: absolute;
 		top: 20%;
-		left: 20%;
+		left: 18%;
 		height: 470px;
 	}
 }
@@ -235,6 +242,8 @@ footer {
 
 		& h1 {
 			text-transform: uppercase;
+			font-family: 'raleway';
+			font-weight: 700;
 		}
 
 		& p {
@@ -259,12 +268,18 @@ footer {
 		}
 
 		& a {
+			display: block;
+			width: 35%;
+			text-align: center;
 			text-decoration: none;
 			color: @color_background;
-			padding: 0.5rem 3rem;
+			padding: 0.8rem 3rem;
 			background-color: @color_dark_orange;
+			font-size: 1.6rem;
+			font-weight: 700;
 
-			&:hover {
+			&:hover,
+			&:active {
 				background-color: darken(@color_dark_orange, 10%);
 			}
 		}
@@ -318,6 +333,10 @@ footer {
 			}
 
 			& div.controls button {
+				display: block;
+				margin-left: 30%;
+				font-size: 1.5rem;
+				font-weight: 700;
 				text-decoration: none;
 				color: white;
 				background-color: @color_dark_orange;
@@ -327,7 +346,8 @@ footer {
 				text-transform: uppercase;
 				transition: all 0.3s;
 
-				&:hover {
+				&:hover,
+				&:active {
 					background-color: darken(@color_dark_orange, 10%);
 				}
 			}
