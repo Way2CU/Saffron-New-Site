@@ -37,6 +37,15 @@
 					<cms:text constant="next_image" />
 					<cms:svg file="site_sprite.svg" symbol="icon-right-arrow" />
 				</a>
+				<cms:desktop>
+					<div id="video">
+						<iframe src="https://player.vimeo.com/video/238910496" width="640" height="360" filerameborder="0" allowfullscreen="true"></iframe>
+					</div>
+				</cms:desktop>
+
+				<cms:mobile>
+					<iframe src="https://player.vimeo.com/video/238910496" width="100%" height="400" filerameborder="0" allowfullscreen="true"></iframe>
+				</cms:mobile>
 			</section>
 
 			<section id="tendencies">
