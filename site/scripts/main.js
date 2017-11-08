@@ -67,7 +67,10 @@ Site.on_load = function() {
 	Site.image_loader
 		.add_gallery(Site.gallery)
 		.set_thumbnail_size(300)
-		.load_by_group_text_id('food_samples');
+		.load_by_group_text_id('food_samples')
+		.add_callback(function() {
+			Site.lightbox = new LightBox('section#food_samples a.image', true, false, true)
+		});
 
 	Site.submit_buttons = document.querySelectorAll('div.controls button.submit');
 	for(var i=0; i < Site.submit_buttons.length; i++) {
