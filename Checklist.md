@@ -10,7 +10,7 @@ All of these need to be checked manually, changed and then committed. System wil
 - Site specific items:
 	- [x] `system_init.xml` file contains all the modules used;
 	- [ ] Deployment script `group_vars/all` file is configured;
-	- [ ] Deployment `hosts.txt` file is configured;
+	- [x] Deployment `hosts.txt` file is configured;
 	- [x] All the languages site is targeting are configured in `config.php`;
 	- [x] Site title is properly defined;
 	- [x] No errors or warnings are reported in the log file;
