@@ -1,0 +1,81 @@
+/**
+ * Header Style Sheet
+ * Saffron New Site
+ *
+ * Copyright (c) 2017. by Way2CU, http://way2cu.com
+ * Authors: Vladimir Anusic
+ */
+
+/**
+ *	Header
+ */
+
+body > svg {
+	display: none;
+}
+
+@keyframes jumping_arrow {
+	from {
+		transform: translateY(-20px);
+	}
+
+	to {
+		transform: translateY(20px);
+	}
+}
+
+header {
+ 	padding: @section_spacing calc(~'(100% - 1200px) / 2');
+ 	min-height: 600px;
+ 	background-image: url(../images/header.jpg);
+ 	background-size: 100% 100%;
+ 	background-repeat: no-repeat;
+ 	background-color: @color_red;
+ 	color: @color_red;
+ 	text-transform: uppercase;
+
+ 	& svg.logo {
+ 		width: 550px;
+ 		height: 190px;
+ 		display: block;
+ 		fill: @color_background;
+ 		margin-top: 5%;
+ 		margin-left: 10%;
+ 	}
+
+ 	& a {
+ 		font-size: 1.7rem;
+ 		font-weight: 700;
+ 		display: block;
+ 		width: 36%;
+ 		padding: 1rem 1rem;
+ 		color: @color_red;
+ 		background-color: @color_yellow;
+ 		border: 1px solid transparent;
+ 		border-radius: 5px;
+ 		text-align: center;
+ 		text-decoration: none;
+ 		margin-left: 14%;
+ 		margin-top: 3%;
+
+ 		&:hover,
+ 		&:active {
+ 			transform: translateY(-15%);
+ 			background-color: @color_red;
+ 			color: @color_yellow;
+ 			transition: all 0.3s;
+ 		}
+ 	}
+
+ 	& svg.arrow {
+ 		display: block;
+ 		margin-left: 20%;
+ 		margin-top: 10%;
+
+ 		animation-name: jumping_arrow;
+		animation-duration: 1s;
+		animation-direction: alternate;
+		animation-timing-function: ease-in-out;
+		animation-iteration-count: infinite;
+ 	}
+}

@@ -1,0 +1,154 @@
+/**
+ * Content Style Sheet
+ * Saffron New Site
+ *
+ * Copyright (c) 2017. by Way2CU, http://way2cu.com
+ * Authors: Vladimir Anusic
+ */
+
+ /**
+ *	Footer
+ */
+
+footer {
+	padding: @section_spacing calc(~'(100% - 1200px) / 2');
+	background: url(../images/footer.svg) @color_red;
+	background-size: cover, cover;
+	background-repeat: no-repeat;
+	background-color: @color_red;
+	color: @color_background;
+	min-height: 300px;
+	text-align: center;
+
+	& div#content_left {
+		width: 40%;
+		display: inline-block;
+		text-align: left;
+		vertical-align: top;
+
+		& h1 {
+			text-transform: uppercase;
+			font-family: 'raleway';
+			font-weight: 700;
+		}
+
+		& p {
+			&:nth-of-type(1) em {
+				font-style: normal;
+				font-weight: 700;
+				margin-top: 1rem;
+				display: inline-block;
+			}
+
+			&:nth-of-type(2) em {
+				font-style: normal;
+			}
+		}
+
+		& hr {
+			width: 260px;
+			height: 1px;
+			margin: 1rem 0;
+			border: 0;
+			background-color: @color_background;
+		}
+
+		& a {
+			display: block;
+			width: 43%;
+			text-align: center;
+			text-decoration: none;
+			color: @color_background;
+			padding: 0.8rem 3rem;
+			background-color: @color_dark_orange;
+			font-size: 1.6rem;
+			font-weight: 700;
+
+			&:hover,
+			&:active {
+				background-color: darken(@color_dark_orange, 10%);
+			}
+		}
+	}
+
+	& div#form_container {
+		width: 40%;
+		display: inline-block;
+		text-align: center;
+		vertical-align: top;
+
+		& p {
+			display: block;
+			width: 65%;
+			margin: 1rem auto;
+		}
+
+		& form {
+			width: 100%;
+
+			& label {
+				width: 100%;
+				display: inline-block;
+				padding-bottom: 1em;
+
+				& input,
+				& select {
+					padding: 1em 0.25em;
+					display: inline-block;
+					vertical-align: middle;
+					width: 70%;
+					box-sizing: border-box;
+					background-color: darken(@color_red, 10%);
+					opacity: 0.7;
+					border: 1px solid @color_background;
+					color: @color_background;
+					transition: all 0.3s;
+
+					&:hover,
+					&:focus {
+						background-color: darken(@color_red, 5%);
+					}
+				}
+
+				& span {
+					display: inline-block;
+					vertical-align: middle;
+					width: 28%;
+					text-align: left;
+				}
+			}
+
+			& div.controls button {
+				display: block;
+				margin-left: 30%;
+				font-size: 1.5rem;
+				font-weight: 700;
+				text-decoration: none;
+				color: white;
+				background-color: @color_dark_orange;
+				padding: 0.5rem 3rem;
+				display: inline-block;
+				border: 1px solid transparent;
+				text-transform: uppercase;
+				transition: all 0.3s;
+
+				&:hover,
+				&:active {
+					background-color: darken(@color_dark_orange, 10%);
+				}
+			}
+		}
+	}
+}
+
+/**
+ *	Copyright
+ */
+
+div.copyright {
+	text-align: center;
+	background-color: black;
+	color: white;
+
+	background-position: calc(~'50% - 100px') center
+}

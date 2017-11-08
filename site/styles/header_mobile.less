@@ -1,0 +1,65 @@
+/**
+ * Header mobile Style Sheet
+ * Saffron New Site
+ *
+ * Copyright (c) 2017. by Way2CU, http://way2cu.com
+ * Authors: Vladimir Anusic
+ */
+
+/**
+ *	Header
+ */
+
+@keyframes jumping_arrow {
+	from {
+		transform: translateY(-15px);
+	}
+
+	to {
+		transform: translateY(15px);
+	}
+}
+
+header {
+ 	background-image: url(../images/mobile-header.jpg);
+ 	background-size: 100% 100%;
+ 	background-repeat: no-repeat;
+ 	background-color: @color_red;
+ 	min-height: 600px;
+
+ 	& svg.logo {
+ 		display: block;
+ 		margin: 0 auto;
+ 		width: 300px;
+ 		fill: @color_background;
+ 	}
+
+ 	& a {
+ 		display: block;
+ 		font-size: 1.3rem;
+ 		font-weight: 700;
+ 		padding: 0.7rem 0.5rem;
+ 		border-radius: 5px;
+ 		background-color: @color_yellow;
+ 		color: @color_red;
+ 		margin: 0 auto;
+ 		width: 93%;
+ 		text-align: center;
+ 		text-decoration: none;
+ 		text-transform: uppercase;
+ 	}
+
+ 	& svg.arrow {
+ 		width: 70px;
+ 		height: 70px;
+ 		display: block;
+ 		margin: 0 auto;
+ 		margin-top: 2rem;
+
+ 		animation-name: jumping_arrow;
+		animation-duration: 1s;
+		animation-direction: alternate;
+		animation-timing-function: ease-in-out;
+		animation-iteration-count: infinite;
+ 	}
+}
