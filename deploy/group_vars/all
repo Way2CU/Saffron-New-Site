@@ -1,6 +1,6 @@
 ---
 site:
-  domain: www.saffrononfire.com
+  domain: saffrononfire.com
   # subdomain: test
   # alias: domain.com
   root: httpdocs
