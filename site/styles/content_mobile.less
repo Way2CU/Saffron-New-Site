@@ -12,7 +12,9 @@
  */
 
 section#about {
-	padding: @section_spacing 1rem;
+	padding: 0 1rem;
+	padding-top: 1rem;
+	padding-bottom: 7rem;
 	background: url(../images/about_banner.svg);
 	background-size: 80% 50%;
 	background-position: 50% 100%;
@@ -21,10 +23,12 @@ section#about {
 
 	& article {
 		color: @color_red;
+	}
 
-		& h1 {
-			display: none;
-		}
+	h2 {
+		font-family: raleway;
+		text-transform: uppercase;
+		text-align: center;
 	}
 }
 
@@ -184,8 +188,9 @@ section#about_saffron {
 		color: @color_background;
 		margin-top: 1rem;
 
-		& h1 {
-			display: none;
+		h2 {
+			font-family: raleway;
+			text-transform: uppercase;
 		}
 	}
 
