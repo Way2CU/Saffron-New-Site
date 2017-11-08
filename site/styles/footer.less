@@ -63,10 +63,12 @@ footer {
 			background-color: @color_dark_orange;
 			font-size: 1.6rem;
 			font-weight: 700;
+			transition: all 0.3s;
 
 			&:hover,
 			&:active {
 				background-color: darken(@color_dark_orange, 10%);
+				transform: translateY(-15%);
 			}
 		}
 	}
@@ -135,6 +137,8 @@ footer {
 				&:hover,
 				&:active {
 					background-color: darken(@color_dark_orange, 10%);
+					transform: translateY(-10%);
+					cursor: pointer;
 				}
 			}
 		}
