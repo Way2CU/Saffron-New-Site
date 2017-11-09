@@ -79,13 +79,6 @@
 					<param name="title" value=""/>
 					<param name="title_tag" value="h2"/>
 				</cms:module>
-
-				<img
-					src="_BASEURL.'/site/images/package.png'"
-					alt="this_img_name"
-					cms:eval="src"
-					cms:constant="alt"
-					/>
 			</section>
 
 			<footer>
