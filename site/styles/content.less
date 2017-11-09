@@ -23,10 +23,11 @@ section#about {
  	& article {
  		width: 50%;
 		margin-left: 15%;
+ 	}
 
-		& h1 {
-			display: none;
-		}
+ 	h2 {
+ 		font-family: 'raleway';
+ 		text-transform: uppercase;
  	}
 }
 
@@ -45,6 +46,7 @@ section#food_samples {
 		vertical-align: middle;
 		padding: 0 2.5em;
 		font-size: 1.3em;
+		transition: all 0.3s;
 
 		svg {
 			width: 50px;
@@ -55,11 +57,10 @@ section#food_samples {
 
 		&:hover {
 			color: lighten(@color_text, 30%);
-			transition: color 0.3s;
+			cursor: pointer;
 
 			svg {
 				transform: scale(1.1);
-				transition: all 0.3s;
 			}
 		}
 	}
@@ -113,6 +114,10 @@ section#food_samples {
 		margin: 0 auto;
 		margin-top: 3rem;
 		text-align: center;
+
+		iframe {
+			border: none;
+		}
 	}
 }
 
@@ -197,14 +202,15 @@ section#about_saffron {
 		margin-top: 1rem;
 		margin-left: 40%;
 
-		& h1 {
-			display: none;
+		h2 {
+			font-family: 'raleway';
+			text-transform: uppercase;
 		}
 	}
 
 	& img {
 		position: absolute;
-		top: 20%;
+		top: 25%;
 		left: 18%;
 		height: 470px;
 	}

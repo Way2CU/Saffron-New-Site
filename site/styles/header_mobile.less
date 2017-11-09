@@ -47,6 +47,14 @@ header {
  		text-align: center;
  		text-decoration: none;
  		text-transform: uppercase;
+ 		transition: all 0.3s;
+
+ 		&:active {
+ 			transform: translateY(-15%);
+ 			background-color: @color_red;
+ 			color: @color_yellow;
+ 			box-shadow: 0px 27px 23px -17px rgba(0,0,0,0.75);
+ 		}
  	}
 
  	& svg.arrow {

@@ -4,6 +4,7 @@
 	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
 		<head>
 			<title><cms:text constant="site_title"/></title>
+			<cms:collection include="animation_chain"/>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
@@ -14,13 +15,17 @@
 				<cms:svg file="site_sprite.svg" symbol="icon-arrow" class="arrow"/>
 			</header>
 
-			<!-- section abou saffron franchise -->
+			<!-- section about saffron franchise -->
 			<section id="about">
 				<cms:module
 					name="articles"
 					action="show"
 					text_id="about"
-					/>
+					template="stock/article_generic.xml"
+					>
+					<param name="title" value=""/>
+					<param name="title_tag" value="h2"/>
+				</cms:module>
 			</section>
 
 			<!-- food samples gallery -->
@@ -39,12 +44,12 @@
 				</a>
 				<cms:desktop>
 					<div id="video">
-						<iframe src="https://player.vimeo.com/video/238910496" width="640" height="360" filerameborder="0" allowfullscreen="true"></iframe>
+						<iframe src="https://player.vimeo.com/video/238910496" width="640" height="360" allowfullscreen="allowfullscreen"></iframe>
 					</div>
 				</cms:desktop>
 
 				<cms:mobile>
-					<iframe src="https://player.vimeo.com/video/238910496" width="100%" height="400" filerameborder="0" allowfullscreen="true"></iframe>
+					<iframe src="https://player.vimeo.com/video/238910496" width="100%" height="400" allowfullscreen="allowfullscreen"></iframe>
 				</cms:mobile>
 			</section>
 
@@ -69,7 +74,11 @@
 					name="articles"
 					action="show"
 					text_id="about_saffron"
-					/>
+					template="stock/article_generic.xml"
+					>
+					<param name="title" value=""/>
+					<param name="title_tag" value="h2"/>
+				</cms:module>
 
 				<img
 					src="_BASEURL.'/site/images/package.png'"
